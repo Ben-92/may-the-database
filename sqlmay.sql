@@ -1,7 +1,8 @@
-drop table if exists tclasse;
-drop table if exists transports;
-drop table if exists transportsc;
 drop table if exists manufacturers;
+drop table if exists transportsc;
+drop table if exists transports;
+drop table if exists tclasse;
+
 
 
 create table tclasse (
@@ -13,7 +14,7 @@ create table tclasse (
 
 create table transports (
     id_transport serial
-                   constraint id_transports_pk
+                   constraint id_transport_pk
                    primary key ,
                    transport_name varchar,
                    transport_type varchar,
@@ -34,7 +35,7 @@ create table transports (
 
 create table transportsc (
     id_transport serial
-                   constraint id_transports_pk
+                   constraint id_transportc_pk
                    primary key ,
                    hyperdrive_rating decimal(2,1),
                    mglt int
